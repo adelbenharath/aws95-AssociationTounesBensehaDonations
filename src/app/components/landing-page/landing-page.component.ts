@@ -77,7 +77,7 @@ export class LandingPageComponent implements OnInit {
      Swal.fire({
        title: "Merci pour votre Générosité",
      });
-     this.router.navigate(["/home"]);
+     this.donationForm.reset();
     console.log(this.donationForm.value);
   }
   submitSign() {
@@ -89,7 +89,7 @@ export class LandingPageComponent implements OnInit {
      Swal.fire({
        title: "Merci pour votre Vigilance",
      });
-     this.router.navigate(["/home"]);
+     this.donationForm.reset();
     console.log(this.signForm.value);
   }
 
