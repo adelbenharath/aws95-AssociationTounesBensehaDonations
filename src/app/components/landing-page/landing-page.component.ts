@@ -72,7 +72,7 @@ export class LandingPageComponent implements OnInit {
     this.model = JSON.stringify({
        donationData: this.donationForm
      }, this.getCircularReplacer()); this.http
-       .post("https://tba2020-a20dd.firebaseio.com/donations" + ".json", this.model)
+       .post("https://ahna-likom-50303.firebaseio.com/donations" + ".json", this.model)
        .subscribe(res => console.log(res));
      Swal.fire({
        title: "Merci pour votre Générosité",
@@ -84,12 +84,12 @@ export class LandingPageComponent implements OnInit {
     this.violation = JSON.stringify({
        violationData: this.signForm
      }, this.getCircularReplacer()); this.http
-       .post("https://tba2020-a20dd.firebaseio.com/violations" + ".json", this.violation)
+       .post("https://ahna-likom-50303.firebaseio.com/violations" + ".json", this.violation)
        .subscribe(res => console.log(res));
      Swal.fire({
        title: "Merci pour votre Vigilance",
      });
-     this.donationForm.reset();
+     this.signForm.reset();
     console.log(this.signForm.value);
   }
 
